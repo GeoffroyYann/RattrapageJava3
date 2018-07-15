@@ -14,4 +14,5 @@ public interface ILightCycle {
 	public boolean isPlayer(int player);
 	public void setModel(IModel model);
 	public IModel getModel();
+	public Color getColor();
 }

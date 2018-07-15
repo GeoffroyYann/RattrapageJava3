@@ -1,5 +1,9 @@
 package view;
 
-public interface IUserOrder {
+import controller.EnumOrder;
 
+public interface IUserOrder {
+	public EnumOrder getOrder();
+	public int getPlayer();
+	
 }

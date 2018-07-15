@@ -1,5 +1,7 @@
 package controller;
 
-public interface IOrderPerformer {
+import view.IUserOrder;
 
+public interface IOrderPerformer {
+	public void orderPerform(final IUserOrder userOrder);
 }

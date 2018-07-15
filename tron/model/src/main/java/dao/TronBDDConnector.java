@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * <h1>The Class BoulderDashBDDConnector.</h1>
+ * <h1>The Class TronBDDConnector.</h1>
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
@@ -24,7 +24,7 @@ final class TronBDDConnector {
     private static String           password = "";
 
     /** The url. */
-    private static String           url      = "jdbc:mysql://localhost/javarat?useSSL=false&serverTimezone=UTC";
+    private static String           url      = "jdbc:mysql://localhost/tron?useSSL=false&serverTimezone=UTC";
 
     /** The connection. */
     private Connection              connection;
@@ -33,16 +33,16 @@ final class TronBDDConnector {
     private Statement               statement;
 
     /**
-     * Instantiates a new boulder dash BDD connector.
+     * Instantiates a new Tron BDD connector.
      */
     private TronBDDConnector() {
         this.open();
     }
 
     /**
-     * Gets the single instance of BoulderDashBDDConnector.
+     * Gets the single instance of TronBDDConnector.
      *
-     * @return single instance of BoulderDashBDDConnector
+     * @return single instance of TronBDDConnector
      */
     public static TronBDDConnector getInstance() {
         if (TronBDDConnector.instance == null) {

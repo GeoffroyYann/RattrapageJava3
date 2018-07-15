@@ -4,16 +4,24 @@ import java.sql.CallableStatement;
 import java.sql.SQLException;
 
 /**
- * <h1>The Class ExampleDAO.</h1>
+ * <h1>The Class TronDAO.</h1>
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Yann
  * @version 1.0
  */
 public abstract class TronDAO extends AbstractDAO {
 
-    /** The sql example by id. */
-    private static String sqlResult = "{call showResult(?, ?)}";
+    /** The sql call by name */
+    private static String sqlResult = "{call badadibadou(?, ?)}";
 
+    /**
+     * Update the BDD with the score
+     * @param player
+     * 				the player
+     * @param time
+     * 				the time
+     * @throws SQLException
+     */
     public static void setResult(final int player, final long time) throws SQLException {
         final CallableStatement callStatement = AbstractDAO.prepareCall(TronDAO.sqlResult);
         callStatement.setInt(1, player);

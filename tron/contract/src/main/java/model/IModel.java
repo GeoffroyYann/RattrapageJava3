@@ -3,6 +3,11 @@ package model;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/** 
+ * <h1> The interface IModel</h1>
+ * @author Yann
+ *
+ */
 public interface IModel {
 	public int getWidth();
 	public int getHeight();

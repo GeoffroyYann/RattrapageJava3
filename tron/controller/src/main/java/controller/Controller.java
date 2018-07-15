@@ -7,18 +7,33 @@ import model.IModel;
 import java.sql.SQLException;
 
 import model.ILightCycle;
-
+/**
+ * <h1>The class Controller</h1>
+ * @author Lisa
+ *
+ */
 public class Controller implements IOrderPerformer, IController {
 
+	/**The view*/
 	public IView view;
+	/**The model*/
 	public IModel model;
+	/**The speed of the lightCycle*/
 	public static int TIME_SLEEP = 30;
+	/**Ends the game*/
 	public boolean isGameOver = false;
-	
+	/**
+	 * Instantiates a new controller object
+	 * @param model
+	 * 				the new model
+	 */				
 	public Controller(final IModel model) {
 		this.model = model;
 	}
 	
+	/**
+	 * Run the game, and close it when done
+	 */
 	public void run() throws SQLException {
 		final long begin = System.currentTimeMillis();
 		this.gameLoop();
@@ -34,7 +49,9 @@ public class Controller implements IOrderPerformer, IController {
 	}
 		this.view.end();
 	}
-	
+	/**
+	 * The gameLoop
+	 */
 	public void gameLoop() {
 		while (!this.isGameOver) {
 			try {
@@ -52,11 +69,16 @@ public class Controller implements IOrderPerformer, IController {
 			this.model.setLightCyclesMoved();
 		}
 	};
-	
+	/**
+	 * Sets the view
+	 * @param view
+	 * 				the new view
+	 */
 	public void setView(IView view) {
 		this.view = view;
 	};
 	
+	/**Change the direction of the lightCycle when a keyEvent occurs*/
 	public void orderPerform(final IUserOrder userOrder) {
 		if (userOrder != null) {
 			final ILightCycle lightCycle = this.model.getLightCyclesPlayer(userOrder.getPlayer());
@@ -80,7 +102,9 @@ public class Controller implements IOrderPerformer, IController {
 			}
 		}
 	}
-	
+	/**
+	 * Check if any collision happen
+	 */
 	public void checkCollision() {
 		for (int player = 0; player < 2; player ++) {
 			if (this.model.getMatrixXY(this.model.getLightCyclesPlayer(player).getPosition().getX(), this.model.getLightCyclesPlayer(player).getPosition().getY()).isWall()) {

@@ -17,16 +17,16 @@ public class ViewFacade implements IView {
         super();
     }
 
-    /*
-     * (non-Javadoc)
-     * @see view.IView#displayMessage(java.lang.String)
+    /**
+     * The method used to display a message
      */
-    @Override
     public final void displayMessage(final String message) {
         JOptionPane.showMessageDialog(null, message);
     }
 
-	@Override
+	/**
+	 * The method which close the game
+	 */
 	public void end() {
 		// TODO Auto-generated method stub
 		

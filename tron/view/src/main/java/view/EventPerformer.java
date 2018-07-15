@@ -5,14 +5,22 @@ import java.awt.event.KeyEvent;
 import controller.EnumOrder;
 import controller.IOrderPerformer;
 
+/**
+ * <h1>The EventPerformer Class</h1>
+ * @author Yann
+ *
+ */
 public class EventPerformer implements IEventPerformer {
 
+	/**The order performed*/
 	private final IOrderPerformer orderPerformer;
-	
+	/**The event performed*/
 	public EventPerformer(IOrderPerformer orderPerformer) {
 		this.orderPerformer = orderPerformer;
 	}
-	
+	/**
+	 * the method that triggers any event
+	 */
 	public void eventPerform(final KeyEvent keyCode) {
 		final IUserOrder userOrder = this.keyCodeToOrder(keyCode.getKeyCode());
 		if (userOrder != null) {
@@ -21,6 +29,13 @@ public class EventPerformer implements IEventPerformer {
 	
 	}
 	
+	/**
+	 * The method which convert the key typed into an action in the game
+	 * @param keyCode
+	 * 				the keyCode
+	 * @return
+	 * 				the right action
+	 */
 	private IUserOrder keyCodeToOrder(final int keyCode) {
 		IUserOrder userOrder;
 		switch (keyCode) {

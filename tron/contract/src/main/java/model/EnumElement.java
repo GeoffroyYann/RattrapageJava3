@@ -1,6 +1,10 @@
 package model;
 
-
+/** 
+ * <h1> The Enumeration EnumElement</h1>
+ * @author Yann
+ *
+ */
 public enum EnumElement implements IMotionLess {
 
 	WALL,
@@ -8,12 +12,18 @@ public enum EnumElement implements IMotionLess {
 	WALL2,
 	GROUND;
 
-	@Override
+	/**
+	 * Method that checks if the square is a Wall
+	 */
 	public boolean isWall() {
 		// TODO Auto-generated method stub
 		return (this == WALL) || (this == WALL1) || (this == WALL2);
 	}
-	
+	/**
+	 * 
+	 * @param player
+	 * @return the right wall, permits to identify where the wall come from
+	 */
 	public static EnumElement getEnumElementPlayer(final int player) {
 		if (player == 0) {
 			return EnumElement.WALL1;

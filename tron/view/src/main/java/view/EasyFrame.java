@@ -9,12 +9,30 @@ import javax.swing.JFrame;
 
 import model.IModel;
 
+/**
+ * <h1>The class EasyFrame</h1>
+ * @author Lisa
+ *
+ */
 public class EasyFrame extends JFrame implements IEasyFrame, KeyListener {
 
     private static final long     serialVersionUID = 1L;
     public static final int       ZOOM             = 1;
     private final IEventPerformer eventPerformer;
 
+    /**
+     * Instantiates a new Frame
+     * @param title
+     * 				the title
+     * @param eventPerformer
+     * 				the event performed
+     * @param tronGraphicsBuilder
+     * 				the tronGraphicsBuilder
+     * @param model
+     * 				the model
+     * @param observable
+     * 				the object observable
+     */
     public EasyFrame(final String title, final EventPerformer eventPerformer,
             final TronGraphicsBuilder tronGraphicsBuilder, final IModel model, final Observable observable) {
         this.eventPerformer = eventPerformer;

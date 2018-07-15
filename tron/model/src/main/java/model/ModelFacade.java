@@ -18,70 +18,92 @@ public final class ModelFacade implements IModel {
         super();
     }
 
+    /**
+     * Gets the LightCycle of a player
+     */
     public ILightCycle getLightCyclesPlayer(final int player) {
-        // TODO Auto-generated method stub
         return null;
     }
 
+    /**
+     * Gets the width
+     */
     public int getWidth() {
         // TODO Auto-generated method stub
         return 0;
     }
 
+    /**
+     * Gets the height
+     */
     public int getHeight() {
         // TODO Auto-generated method stub
         return 0;
     }
 
+    /**
+     * Sets the width
+     */
     public void setWidth(final int width) {
         // TODO Auto-generated method stub
 
     }
 
+    /**
+     * Sets the height
+     */
     public void setHeight(final int height) {
         // TODO Auto-generated method stub
 
     }
 
+    /**
+     * Gets the matrix, the position of a point
+     */
     public IMotionLess getMatrixXY(final int x, final int y) {
         // TODO Auto-generated method stub
         return null;
     }
 
+    /**
+     * Sets the matrix
+     */
     public void setMatrixXY(final IMotionLess motionLess, final int x, final int y) {
         // TODO Auto-generated method stub
 
     }
 
+    /**
+     * An ArrayList which contains the LightCycles  */
     public ArrayList<ILightCycle> getLightCycles() {
         // TODO Auto-generated method stub
         return null;
     }
 
-    public void setLightCyclesHaveMoved() {
-        // TODO Auto-generated method stub
-
-    }
-
+    /**
+     * A method that add a Wall object
+     */
     public void addWall(final int player) {
-        // TODO Auto-generated method stub
-
     }
 
+    /**
+     * A method that add a LightCycle object
+     */
     public void addLightCycle(final ILightCycle lightCycle) {
-        // TODO Auto-generated method stub
 
     }
 
-	@Override
+	/**
+	 * Sets the movement of a LightCycle
+	 */
 	public void setLightCyclesMoved() {
-		// TODO Auto-generated method stub
 		
 	}
 
+	/**
+	 * Sets the result of the game
+	 */
 	public void setResult(final int player, final long time) throws SQLException {
-		// TODO Auto-generated method stub
-		
 	}
 }
 

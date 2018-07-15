@@ -1,7 +1,11 @@
 package model;
 
 import java.awt.Color;
-
+/** 
+ * <h1> The interface ILightCycle</h1>
+ * @author Yann
+ *
+ */
 public interface ILightCycle {
 
 	public boolean isAlive();

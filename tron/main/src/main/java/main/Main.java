@@ -9,11 +9,23 @@ import model.Model;
 import model.Position;
 import view.View;
 
+/**
+ * <h1>The class Main</h1>
+ * @author Yann
+ *
+ */
 public class Main {
 
+	/** the width of the map*/
 	private final static int width = 400;
+	/** the height of the map*/
 	private final static int height = 600;
 	
+	/**
+	 * The main method
+	 * @param args
+	 * 			the arguments
+	 */
 	public static void main(String[] args) {
 		final Model model = new Model(Main.width, Main.height);
 		model.addLightCycle(new LightCycle(2, new Position(50, 50), Color.BLACK, 0));
